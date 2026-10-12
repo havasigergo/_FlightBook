@@ -9,6 +9,8 @@
             Flight flight2 = new Flight("FR122", "New-York,", 15000, 1);
 
 
+            Passenger passenger3 = new Passenger()
+
             //másik
             Passenger passenger1 = new Passenger("Vendel", 10);
             Passenger passenger2 = new Passenger("Gergő", 25);
