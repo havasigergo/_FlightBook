@@ -20,7 +20,16 @@
             Console.WriteLine($"Passenger 1: {passenger1.Name}, Age: {passenger1.Age}, Bags: {passenger1.BagCount}, Is Child: {passenger1.IsChild()}");
             Console.WriteLine($"Passenger 2: {passenger2.Name}, Age: {passenger2.Age}, Bags: {passenger2.BagCount}, Is Child: {passenger2.IsChild()}");
 
+            Schedule schedule1 = new Schedule();
+            schedule1.AddFlight(flight1);
+            schedule1.AddFlight(flight2);
 
+            Flight flight3 = new Flight("FR124", "London,", 20000, 0);
+            schedule1.AddFlight(flight3);
+
+            Console.WriteLine($"Number of flights: {schedule1.Flights.Count}");
+            Console.WriteLine($"Fully booked flights: {schedule1.FullyBookedCount()}");
+            Console.WriteLine($"Free seats to London: {schedule1.FreeSeatsTo("London")}");
 
         }
     }
